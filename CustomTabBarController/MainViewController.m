@@ -131,7 +131,7 @@
     dynamicButton.image = [UIImage imageNamed:@"tab_qzone_nor"];
     dynamicButton.highlightedImage = [UIImage imageNamed:@"tab_qzone_press"];
     
-    [self setTabBarItemForView:dynamicButton title:@"发现" selected:NO];
+    [self setTabBarItemForView:dynamicButton title:@"动态" selected:NO];
     
     UITapGestureRecognizer *dynamicTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeViewController:)];
     [dynamicButton addGestureRecognizer:dynamicTap];
@@ -256,5 +256,11 @@
         _bgView.hidden = NO;
         _bgView.frame = CGRectMake(0, 431, 320, 49);
     } completion:nil];
+}
+
+- (void)dealloc
+{
+    [_bgView release];
+    [super dealloc];
 }
 @end
