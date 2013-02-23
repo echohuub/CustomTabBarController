@@ -18,4 +18,34 @@ CustomTabBarController是一个自定义的UITabBarController，类似于iPhone�
 ![Image text](http://github.com/heqingbao/CustomTabBarController/raw/master/Screenshots/home1.jpg)
 ###DetailViewController隐藏TabBar
 ![Image text](http://github.com/heqingbao/CustomTabBarController/raw/master/Screenshots/detail.jpg)
+##使用方法
 
+导入头文件
+```objc
+#import "MainViewController.h"
+```
+修改MainViewController中的loadViewControllers方法创建和初始化
+```objc
+- (void)layoutViewControllers
+{...}
+```
+显示TabBar
+```objc
+MainViewController *tabBarVC = (MainViewController *)self.tabBarController;
+[tabBarVC showTabBar];
+```
+隐藏TabBar
+```objc
+MainViewController *tabBarVC = (MainViewController *)self.tabBarController;
+[tabBarVC hideTabBar];
+```
+设置有未读消息状态
+```objc
+MainViewController *tabBarVC = (MainViewController *)self.tabBarController;
+[tabBarVC setUnReadFlagWithIndex:0];
+```
+清除未读消息状态
+```objc
+MainViewController *tabBarVC = (MainViewController *)self.tabBarController;
+[tabBarVC clearUnReadFlagWithIndex:0];
+```
