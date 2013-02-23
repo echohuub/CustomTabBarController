@@ -49,3 +49,6 @@ MainViewController *tabBarVC = (MainViewController *)self.tabBarController;
 MainViewController *tabBarVC = (MainViewController *)self.tabBarController;
 [tabBarVC clearUnReadFlagWithIndex:0];
 ```
+##测试环境
+- iOS >= 4.3
+- ARC
